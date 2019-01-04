@@ -1,31 +1,22 @@
-#include <math.h>
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
-#include <assert.h>
-#include <limits.h>
-#include <stdbool.h>
-
+#include<stdio.h>
 int main(){
-    int n; 
+    long long int n,base=1,bin=0,r,max=0,count=0;
     scanf("%d",&n);
-    int s=0,t=0,rem=0;
-    while(n>0)
-        {
-        rem=n%2;
+
+    while(n>0){
+        r=n%2;
         n=n/2;
-        if(rem==1)
-         {   s++;
-           if(s>=t)
-
-            t=s;
-
+        if(r==1){
+            count++;
         }
         else{
-
-            s=0;
-        }   
+            if(count>=max){
+                max=count;
+            }
+            count=0;
+        }
+        
     }
-    printf("%d",t);
+    printf("%d",max);
     return 0;
 }
