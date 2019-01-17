@@ -5,6 +5,9 @@ This is the Repository where you can find all the solution of the Problems which
 You can also refer to my HackerRank profile
 https://www.hackerrank.com/nishant_275?hr_r=1
 
+Also, I've written a few articles on Machine Learning and AI. Feel free to go through these.
+https://medium.com/@nsethi610
+
 Feel free to raise issues or you can directly contact me via gmail.
 Happy Coding!!
 
