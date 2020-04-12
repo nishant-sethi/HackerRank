@@ -3,82 +3,69 @@
 #include <vector>
 #include <iostream>
 #include <algorithm>
+#include<climits>
 using namespace std;
-vector <int> a;
-void downheapify( int i, int n){
-    int min=i;
+vector<long> heap;
+void upheapify(int i){
+    int parent=(i-1)/2;
+    while(i>=0 && heap[parent]>heap[i]){
+        swap(heap[parent],heap[i]);
+        i=parent;
+        parent=(i-1)/2;
+}
+}
+void insert(long ele){
+    heap.push_back(ele);
+    if(heap.size()==1){
+    }
+    else{
+    upheapify(heap.size()-1);
+    }
+}
+void downheapify(int i){
     int l=2*i+1;
     int r=2*i+2;
-    if(l<n && a[l]<a[i]){
-        min=l;
+    int smallest=i;
+    if(l<heap.size() && heap[smallest]>heap[l])
+        smallest=l;
+    if(r<heap.size() && heap[smallest]>heap[r])
+        smallest=r;
+    if(smallest!=i)
+        {
+            swap(heap[i],heap[smallest]);
+            downheapify(smallest);
+        }
+}
+void del(int ele){
+    int idx;
+    for(idx=0;idx<heap.size();idx++){
+        if(heap[idx]==ele)
+            break;
     }
-    if(r<n && a[r]<a[min]){
-        min=r;
-    }
-    if(min!=i){
-        int temp=a[i];
-        a[i]=a[min];
-        a[min]=temp;
-        downheapify(min,n);
+    if(heap.size()==1) heap.pop_back();
+    else {heap[idx]=heap[heap.size()-1];
+    heap.pop_back();
+    downheapify(idx);
     }
 }
-void upHeapify(int n, int x){
-    int i=n-1;
-    int p=(i-1)/2;
-    while(p>=0 && a[p]>a[i]){
-        swap(a[i],a[p]);
-        i=p;
-        p=(i-1)/2;
-    }   
-}
-void insert(int x){
-    a.push_back(x);
-    int n=a.size();
-    if(n!=1)
-    upHeapify(n,x);
-}
-
-void deleting( int e){
-    
-    int pos;
-    for(int i=0; i<a.size(); i++){
-        if(a[i]==e){
-            pos=i;
+int main() {
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */   
+    int q,ch;
+    long v;
+    cin>>q;
+    vector<long> ans;
+    while(q--){
+        cin>>ch;
+        switch(ch){
+            case 1:cin>>v;
+            insert(v);break;
+            case 2:cin>>v;
+            del(v);break;
+            case 3:ans.push_back(heap[0]);
             break;
         }
     }
-    int temp=a[pos];
-    a[pos]=a[a.size()-1];
-    a[a.size()-1]=temp;
-    a.pop_back();
-    int n=a.size();
-    downheapify(pos,n);
-}
-
-int main() {
-    int q,type;
-    cin>>q; 
-    int ans[q];
-    int t=0;
-    for(int i=1;i<=q; i++){
-        cin>>type;
-        switch(type){
-            case 1:
-                int x;
-                cin>>x;
-                insert(x);
-                break;
-            case 2:
-                int e;
-                cin>>e;
-                deleting(e);
-                break;
-            case 3:
-                ans[t++]=a[0];
-                break;    
-        }
-    }
-    for(int i=0; i<t; i++){
+    for(int i=0;i<ans.size();i++){
         cout<<ans[i]<<endl;
     }
     return 0;
