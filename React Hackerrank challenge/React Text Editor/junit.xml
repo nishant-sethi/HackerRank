@@ -1,0 +1,22 @@
+<testsuites name="jest tests" tests="9" failures="0" time="1.062">
+  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2020-08-26T11:15:51" time="1.062" tests="9">
+    <testcase classname=" Initial UI renders correctly" name=" Initial UI renders correctly" time="0.128">
+    </testcase>
+    <testcase classname=" Append button becomes enabled when the word input is non-empty" name=" Append button becomes enabled when the word input is non-empty" time="0.008">
+    </testcase>
+    <testcase classname=" Append button becomes disabled when the word input is emptied" name=" Append button becomes disabled when the word input is emptied" time="0.006">
+    </testcase>
+    <testcase classname=" Undo button becomes enabled when the text is not empty" name=" Undo button becomes enabled when the text is not empty" time="0.01">
+    </testcase>
+    <testcase classname=" Undo button becomes disabled when the text is emptied" name=" Undo button becomes disabled when the text is emptied" time="0.008">
+    </testcase>
+    <testcase classname=" Word input is emptied when the word is appended" name=" Word input is emptied when the word is appended" time="0.005">
+    </testcase>
+    <testcase classname=" Append appends words correctly to text" name=" Append appends words correctly to text" time="0.009">
+    </testcase>
+    <testcase classname=" Undo removes the last appended word correctly from text" name=" Undo removes the last appended word correctly from text" time="0.017">
+    </testcase>
+    <testcase classname=" Appending after undo appends correctly" name=" Appending after undo appends correctly" time="0.012">
+    </testcase>
+  </testsuite>
+</testsuites>

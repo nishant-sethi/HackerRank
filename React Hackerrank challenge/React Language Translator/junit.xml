@@ -1,0 +1,14 @@
+<testsuites name="jest tests" tests="5" failures="0" time="1.833">
+  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2020-08-26T00:40:08" time="1.833" tests="5">
+    <testcase classname=" Initial UI renders correctly" name=" Initial UI renders correctly" time="0.105">
+    </testcase>
+    <testcase classname=" Test with existing translations" name=" Test with existing translations" time="0.02">
+    </testcase>
+    <testcase classname=" Test with non-existing translations" name=" Test with non-existing translations" time="0.008">
+    </testcase>
+    <testcase classname=" Test with existing translation followed by non-existing translations" name=" Test with existing translation followed by non-existing translations" time="0.005">
+    </testcase>
+    <testcase classname=" Test with non-existing translation followed by existing translations" name=" Test with non-existing translation followed by existing translations" time="0.005">
+    </testcase>
+  </testsuite>
+</testsuites>

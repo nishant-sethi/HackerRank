@@ -1,0 +1,14 @@
+<testsuites name="jest tests" tests="5" failures="0" time="2.261">
+  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2020-08-26T00:24:48" time="2.261" tests="5">
+    <testcase classname=" Testing for cycle length 1" name=" Testing for cycle length 1" time="0.114">
+    </testcase>
+    <testcase classname=" Testing for cycle length 2" name=" Testing for cycle length 2" time="0.055">
+    </testcase>
+    <testcase classname=" Testing for cycle length 3" name=" Testing for cycle length 3" time="0.057">
+    </testcase>
+    <testcase classname=" Testing for cycle length 7" name=" Testing for cycle length 7" time="0.074">
+    </testcase>
+    <testcase classname=" Testing for cycle length 31" name=" Testing for cycle length 31" time="0.281">
+    </testcase>
+  </testsuite>
+</testsuites>

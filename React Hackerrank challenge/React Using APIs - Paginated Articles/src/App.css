@@ -1,0 +1,21 @@
+html, body {
+  font-family: 'Open Sans';
+}
+
+.App {
+  max-width: 600px;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.pagination {
+}
+
+.pagination button {
+  margin-left: 0.5rem;
+
+}
+
+.results {
+  margin-top: 1rem;
+}

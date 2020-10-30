@@ -1,0 +1,10 @@
+<testsuites name="jest tests" tests="3" failures="0" time="1.906">
+  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2020-08-26T12:07:52" time="1.906" tests="3">
+    <testcase classname=" Renders the correct number of page buttons" name=" Renders the correct number of page buttons" time="0.051">
+    </testcase>
+    <testcase classname=" Renders articles correctly on app did mount" name=" Renders articles correctly on app did mount" time="0.009">
+    </testcase>
+    <testcase classname=" Renders articles correctly after page button click" name=" Renders articles correctly after page button click" time="0.018">
+    </testcase>
+  </testsuite>
+</testsuites>

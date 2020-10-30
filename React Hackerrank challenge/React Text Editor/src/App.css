@@ -1,0 +1,30 @@
+html, body {
+  font-family: 'Open Sans';
+}
+
+.App {
+  max-width: 600px;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-around;
+}
+
+.controls button {
+  margin-left: 1rem;
+}
+
+.word-input {
+  flex: 1;
+}
+
+.text-field {
+  margin-top: 1rem;
+  min-height: 200px;
+  min-width: 100%;
+  border: 1px solid #ddd;
+  padding: 5px;
+}

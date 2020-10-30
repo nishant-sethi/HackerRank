@@ -1,0 +1,26 @@
+html, body {
+  font-family: 'Open Sans';
+}
+
+.App {
+  max-width: 600px;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.controls {
+}
+
+.input-container {
+  margin-top: 1rem;
+}
+
+.input-container span {
+  display: inline-block;
+  width: 50px;
+}
+
+.input-container input {
+  margin-left: 1rem;
+  padding: 5px;
+}
