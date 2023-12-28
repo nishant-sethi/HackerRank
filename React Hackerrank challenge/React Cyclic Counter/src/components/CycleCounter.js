@@ -1,29 +1,23 @@
-import React from "react";
+import { useState } from 'react';
 
-class CycleCounter extends React.Component {
-  state = {
-    count: 0,
-  };
-  incrementCounter = (cycle) => {
-    if (this.state.count + 1 === (this.props.cycle || 4)) {
-      this.setState({ count: 0 });
+function CycleCounter({ cycle }) {
+  const [count, setCount] = useState(0);
+  const incrementCounter = (cycle) => {
+    if (count + 1 === (cycle || 4)) {
+      setCount(0);
     } else {
-      this.setState({ count: this.state.count + 1 });
+      setCount(count + 1);
     }
   };
-  render() {
-    const { cycle } = this.props;
-
-    return (
-      <button
-        data-testid="cycle-counter"
-        style={{ fontSize: "1rem", width: 120, height: 30 }}
-        onClick={() => this.incrementCounter(cycle)}
-      >
-        {this.state.count}
-      </button>
-    );
-  }
+  return (
+    <button
+      data-testid='cycle-counter'
+      style={{ fontSize: '1rem', width: 120, height: 30 }}
+      onClick={() => incrementCounter(cycle)}
+    >
+      {count}
+    </button>
+  );
 }
 
 export default CycleCounter;
