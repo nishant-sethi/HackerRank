@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import registerServiceWorker from './registerServiceWorker';
 
 const TRANSLATIONS = new Map([
   ['ball', 'pelota'],
@@ -13,5 +12,7 @@ const TRANSLATIONS = new Map([
   ['orange', 'naranja'],
 ]);
 
-ReactDOM.render(<App translations={TRANSLATIONS} />, document.getElementById('root'));
-registerServiceWorker();
+ReactDOM.render(
+  <App translations={TRANSLATIONS} />,
+  document.getElementById('root')
+);
