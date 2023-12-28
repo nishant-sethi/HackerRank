@@ -1,45 +1,40 @@
-import React from "react";
+import { useState } from 'react';
 
-class Translator extends React.Component {
-  state = {
-    output: "",
-  };
-  translate(translations, value) {
-    this.setState({
-      output:
-        typeof translations.get(value) === "undefined"
-          ? ""
-          : translations.get(value),
-    });
+function Translator({ translations }) {
+  const [output, setOutput] = useState('');
+
+  function translate(translations, value) {
+    const result =
+      typeof translations.get(value) === 'undefined'
+        ? ''
+        : translations.get(value);
+    setOutput(result);
   }
-  render() {
-    const { translations } = this.props;
-    return (
-      <React.Fragment>
-        <div className="controls">
-          <div className="input-container">
-            <span>input:</span>
-            <input
-              type="text"
-              className="text-input"
-              data-testid="text-input"
-              onChange={(e) => this.translate(translations, e.target.value)}
-            />
-          </div>
-          <div className="input-container">
-            <span>output:</span>
-            <input
-              type="text"
-              className="text-output"
-              data-testid="text-output"
-              value={this.state.output}
-              readOnly
-            />
-          </div>
+  return (
+    <>
+      <div className='controls'>
+        <div className='input-container'>
+          <span>input:</span>
+          <input
+            type='text'
+            className='text-input'
+            data-testid='text-input'
+            onChange={(e) => translate(translations, e.target.value)}
+          />
         </div>
-      </React.Fragment>
-    );
-  }
+        <div className='input-container'>
+          <span>output:</span>
+          <input
+            type='text'
+            className='text-output'
+            data-testid='text-output'
+            value={output}
+            readOnly
+          />
+        </div>
+      </div>
+    </>
+  );
 }
 
 export default Translator;
